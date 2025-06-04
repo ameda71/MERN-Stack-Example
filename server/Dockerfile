@@ -6,8 +6,9 @@ COPY package.json ./
 COPY server.js ./
 COPY yarn.lock ./
 
-ADD db /app/db
-ADD routes /app/routes
+COPY db /app/db
+COPY routes /app/routes
+
 
 RUN yarn install --production
 
